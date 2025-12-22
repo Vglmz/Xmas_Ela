@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #630606;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Marco con borde estilo bastón */
+.frame {
+  padding: 18px; /* grosor del borde */
+  border-radius: 22px;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #c40000 0px,
+      #c40000 8px,
+      #ffffff 8px,
+      #ffffff 16px
+    );
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+/* Área interior verde */
+.content {
+  width: 900px;
+  min-height: 650px;      /* 🔹 más largo hacia abajo */
+  background: #0f3b25;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 🔹 ya no centra todo verticalmente */
+  align-items: center;
+  text-align: center;
+
+  padding: 40px;
+  color: #ffffff;
+}
+
+/* Título */
+.content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+}
+
+/* Texto */
+.content p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+/* Imagen interna */
+.content img {
+  width: 320px;
+  height: auto;           /* 🔹 mantiene proporción */
+  object-fit: contain;    /* 🔹 no recorta */
+  border-radius: 0;       /* 🔹 sin marco ni efecto */
+  box-shadow: none;       /* 🔹 sin sombra */
+  margin-top: 10px;
+}
