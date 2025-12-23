@@ -104,8 +104,8 @@ body {
 }
 
 .nav-btn img {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   transition: transform 0.2s ease;
 }
 
@@ -115,10 +115,13 @@ body {
 
 /* Imagen principal */
 .main-image {
-  width: 140px;
+  width: 320px;               /* ⬅ más grande */
+  max-width: 30vw;           /* ⬅ responsive */
   height: auto;
-  image-rendering: pixelated; /* clave para look retro */
+  image-rendering: pixelated;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
+
 
 /* Recuadro de texto */
 .text-box {
@@ -133,4 +136,32 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
   opacity: 0.9;
+}
+
+.media-slot {
+  width: 320px;          /* espacio central fijo */
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen */
+.main-image {
+  max-width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* Spotify */
+.spotify {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.spotify iframe {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }

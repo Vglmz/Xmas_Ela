@@ -8,43 +8,70 @@
 </head>
 <body>
 
-  <div class="page">
+<div class="page">
 
-    <div class="frame">
-      <div class="content">
-        <h1>Feliz Navidad ❤️</h1>
-        <p>
-          Aunque estemos lejos, quise hacerte algo especial.
-          Algo que puedas abrir cuando me extrañes.
-        </p>
-        <img src="Assets/cebo-navidad.png" alt="Nosotros">
-      </div>
+  <div class="frame">
+    <div class="content">
+      <h1>Feliz Navidad ❤️</h1>
+      <p>
+        Aunque estemos lejos, quise hacerte algo especial.
+        Algo que puedas abrir cuando me extrañes.
+      </p>
+      <img src="Assets/cebo-navidad.png" alt="Nosotros">
     </div>
-
-    <section class="gallery-section">
-      <h2>¿Sabes cuánto falta para besarnos con nuestra banda de fondo?</h2>
-
-      <div class="carousel">
-        <button class="nav-btn">
-          <img src="Assets/boton-izq.png" alt="Anterior">
-        </button>
-
-        <img class="main-image" src="Assets/mp3.png" alt="Imagen principal">
-
-        <button class="nav-btn">
-          <img src="Assets/boton-der.png" alt="Siguiente">
-        </button>
-      </div>
-
-      <div class="text-box">
-        <p>
-          Párrafo introductorio hablando… Párrafo introductorio hablando…
-        </p>
-      </div>
-    </section>
-
   </div>
 
-</body>
+  <section class="gallery-section">
+    <h2>¿Sabes cuánto falta para besarnos con nuestra banda de fondo?</h2>
 
+    <div class="carousel">
+
+      <button class="nav-btn" data-direction="prev">
+        <img src="Assets/boton-izq.png" alt="Anterior">
+      </button>
+
+      <!-- CONTENEDOR CENTRAL -->
+      <div class="media-slot">
+
+        <img
+          id="carousel-image"
+          class="main-image"
+          src="Assets/mp3.png"
+          alt="Imagen principal"
+        >
+
+        <div id="spotify-embed" class="spotify hidden">
+          <iframe
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/3kWOTN4ixLHNjtp2tgvP09"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+
+      <button class="nav-btn" data-direction="next">
+        <img src="Assets/boton-der.png" alt="Siguiente">
+      </button>
+
+    </div>
+
+    <p id="audio-label"></p>
+
+    <div class="text-box">
+      <p id="carousel-text">
+        Párrafo introductorio hablando… Párrafo introductorio hablando…
+      </p>
+    </div>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
