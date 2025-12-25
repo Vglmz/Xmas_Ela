@@ -4,25 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Regalo de Navidad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<canvas id="snow"></canvas>
+<div class="center">
+  <div class="text-center">
+    <h1></h1>
+  </div>
+</div>
 <div class="page">
 
   <div class="frame">
     <div class="content">
-      <h1>Feliz Navidad ❤️</h1>
+      <h1>❆ Cebo Navideño ❆</h1>
       <p>
-        Aunque estemos lejos, quise hacerte algo especial.
-        Algo que puedas abrir cuando me extrañes.
+        Hola hermosa :3 
+
+        <br><br>Como no podemos estar juntas esta navidad y especialmente porque no me das tu 
+        dirección para mandarte un regalo!!! Te hice esta pagina tonta :) En verdad te 
+        siento como parte mia y te extraño mucho en estos momentos. Amaria estar contigo 
+        y darte regalos y mua mua, pero espero poder hacer eso y mas muy pronto ;). Esto 
+        no es para nada en cambio a tu regalo pero si algo que puedo darte esta noche estando
+         lejos sin tener tu direccion!!! Todo es muy tonto pero con mucho amor linda. Me gusta
+          hacerte estas cosas y demostrar mas alla de lo fisico lo mucho que te amo y me importas
+           ela. Pero ya muy cursi uwu para ser solo el inicio je, entonceeesss disfruta amor **⋆꙳•̩̩͙❅*̩̩͙‧͙ ‧͙*̩̩͙❆ ͙͛** 
+
+        <br><br>Disfruta a cebo y pitayon navideños :)))
       </p>
-      <img src="Assets/cebo-navidad.png" alt="Nosotros">
+      <div class="content-images">
+        <img src="Assets/cebo-navidad.png" alt="Nosotros" class="main-cebo">
+        <img src="Assets/pitayon.png" alt="Detalle" class="side-cebo">
+      </div>
     </div>
   </div>
 
   <section class="gallery-section">
-    <h2>¿Sabes cuánto falta para besarnos con nuestra banda de fondo?</h2>
+    <h2>¿Te he pensado mas de lo que imaginas… sabes a que suenas en mi mente?</h2>
 
     <div class="carousel">
 
@@ -64,14 +88,133 @@
 
     <div class="text-box">
       <p id="carousel-text">
-        Párrafo introductorio hablando… Párrafo introductorio hablando…
+        Creo que te sorprenderia lo frecuente que es mi hobby de acostarme y pensar en ti escuchando musica. Me gusta recordarte y tenerte muy presente en mi mente todo el tiempo. Se siente muy lindo estar enamorada de ti Daniela.<br><br>Estas son algunas canciones que amo escuchar pensando en ti. Algunas un poco más diferente de las que te suelo dedicar je, pero me gustan mucho y puede que algunas a ti tambien :)
       </p>
     </div>
 
-  </section>
+  
+<h2 class="mockup-title">
+  ¿Sabes cuánto falta para besarnos con nuestra banda de fondo?
+</h2>
 
+<img
+  src="Assets/gif.gif"
+  alt="Fogata pixel"
+  class="mockup-gif"
+/>
+
+<button class="mockup-btn" id="openModal">
+  Muchas Muchasss
+</button>
+
+  <div class="response-section">
+    <h3>Preguntitas ^w^</h3>
+    <p>Responde hermosa</p>
+
+    <form class="response-form" action="https://formspree.io/f/xkowpdov" method="POST">
+
+      <div class="question">
+        <label>¿Que te gustaria hacer el siguiente año de plan navideño romantico :3?</label>
+        <div class="input-row">
+          <input type="text" name="q1" placeholder="" required>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>¿Que regalo te gustaria para el siguiente año bonita?</label>
+        <div class="input-row">
+          <input type="text" name="q2" placeholder="" required>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>¿Si te gustan mis paginas tontas cacorras je?</label>
+        <div class="input-row">
+          <input type="text" name="q3" placeholder="" required>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar</button>
+      <div id="successMessage" class="success-message hidden" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+  
+  <div class="extra-action">
+    <h3>Por ultimo, algo tonto je</h3>
+    <img src="Assets/nintendo-ds.png" alt="Abrir recuadro" id="openModalImg" class="image-button">
+  </div>
+</section>
+  <!-- spacer vacío para asegurar espacio debajo de la última imagen -->
+  <div class="page-bottom-spacer" aria-hidden="true"></div>
+</div>
+<script src="script.js" defer></script>
+
+<div class="overlay hidden" id="overlay">
+  <div class="modal" id="modal">
+
+    <!-- Vista por defecto (usada por el botón Muchas Muchasss) -->
+      <!-- Close button for modal (visible in top-right for all views) -->
+      <button id="closeQuiz" class="modal-close" aria-label="Cerrar">✕</button>
+
+    <div class="modal-default" id="modalDefault">
+      <button id="closeModal" class="modal-close" aria-label="Cerrar">✕</button>
+
+      <div class="modal-slideshow">
+        <button class="modal-nav modal-prev" id="modalPrev" aria-label="Anterior">‹</button>
+
+        <div id="modalSlides" class="modal-slides">
+          <!-- Slides se generan dinámicamente: cada slide tendrá texto y dos imágenes -->
+        </div>
+
+        <button class="modal-nav modal-next" id="modalNext" aria-label="Siguiente">›</button>
+      </div>
+
+      <div class="modal-counter" id="modalCounter" aria-hidden="true"></div>
+    </div>
+
+    <!-- Quiz romántico (se abre desde la imagen) -->
+    <div class="modal-quiz hidden" id="modalQuiz" aria-live="polite">
+      <div class="quiz-header">
+        <div class="quiz-progress" id="quizProgress" aria-hidden="true">
+          <!-- corazones se generarán dinámicamente -->
+        </div>
+      </div>
+
+      <div class="quiz-body">
+        <div id="questionContainer" class="question-container">
+          <div id="questionText" class="question-text"></div>
+          <div class="choices" id="choices">
+            <button class="btn-choice" id="choice0"></button>
+            <button class="btn-choice" id="choice1"></button>
+          </div>
+          <div id="questionFeedback" class="question-feedback" aria-live="polite"></div>
+        </div>
+
+        <div id="unlockedGrid" class="unlocked-grid" aria-live="polite">
+          <!-- imágenes y frases desbloqueadas -->
+        </div>
+
+        <!-- Botón que aparece al ganar para abrir las 6 slides (flecha derecha) -->
+        <button id="quizOpenSlidesBtn" class="modal-nav hidden" aria-label="Ver slides">›</button>
+
+        <!-- Slider de quiz: 5 imágenes desbloqueadas + carta final -->
+        <div id="quizSlider" class="quiz-slider hidden" aria-hidden="true">
+          <button id="quizPrevSlide" class="modal-nav hidden" aria-label="Anterior">‹</button>
+          <div id="quizSlideDisplay" class="quiz-slide-display"></div>
+          <button id="quizNextSlide" class="modal-nav" aria-label="Siguiente">›</button>
+        </div>
+
+        <div id="finalLetter" class="final-letter hidden">
+          <h3>Una carta para ti</h3>
+          <div id="letterContent"></div>
+        </div>
+      </div>
+
+      <!-- footer close removed; top-right 'x' button (id=closeQuiz) handles closing -->
+    </div>
+
+  </div>
 </div>
 
-<script src="script.js"></script>
-</body>
+</body> 
 </html>
