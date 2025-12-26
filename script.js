@@ -184,27 +184,27 @@ if (openModalImg) {
 /* --- Modal slideshow implementation for modalDefault --- */
 const modalSlidesData = [
   {
-    title: 'Chocolate Navideño',
-    text: 'Me gusta demasiado hacer las cosas que son importantes para ti y que te gustan, aunque yo las odie un poco ahahahaha. Y siento que eres de las que les gusta tal vez mucho chocolate caliente con masmelos ahahahahah. Solo porque soy pancito tragada que contigo te lo prepararia en una tasa muy navideña ahahaha mientras te consiento todo el dia :3 Y por ti prometo probarlo :)',
+    title: 'Chocolatito navideño',
+    text: 'Me gusta demasiado hacer las cosas que son importantes para ti y que te gustan, aunque yo las odie un poco ahahahaha. Y se que te gusta tal vez mucho el chocolate caliente con masmelos ahahahahah. Solo porque soy pancito tragada que contigo te lo prepararia en una tasa muy navideña ahahaha mientras te consiento todo el dia :3 Y por ti prometo probarlo :)',
     images: ['Assets/purin-reno.png']
   },
   {
-    title: 'Paseo y Fotos',
+    title: 'Alumbrados rolos eeeee',
     text: 'Claramente este plan no podia faltar ahahahha. A mi me gusta, y saber que a ti te encanta me da mas ganas aun de hacerlo :). Yo te tomo fotos lindas y caminamos muy romanticamente mientras mua mua pero mua mua no muy publico pero aun así mua mua para que estes muy feli :3 Yo te tomo fotos romanticas con mi camara :) yyyy nos podemos tomar una foto romantica como la que nos tomo santi por tu cumple. Prometo hacerlo muy romantico todo hermosa.',
     images: ['Assets/pinguinos.png']
   },
   {
-    title: 'Maratón de Películas',
+    title: 'Cineee Melanieee ahahah',
     text: 'Por si se te olvida (aunque es imposible porque nunca me callo acerca de lo mucho que me gustan) soy una mujer de cine 🚬 ahahahaha. Así queeee claramente tenemos que ver muchas muchas muchassss pelis :) De navidad obvio. Yo veo hasta las mas cliches y las mas tontas contigo :3 Pero tambien mis pelis de cine 🚬 que tengo que mostrarte para que me puedas hablar por 1 hora sobre que te gusto o no y mirarte como tonta enamorada :) Ademas hay una peli que es de terror que es de navidad y esa me da mucho miedo tonces la quiero ver contigo ahahahaha',
     images: ['Assets/aguacate.png']
   },
   {
-    title: 'Noche de Juegos',
+    title: 'Jueguitos divertidos eeee',
     text: 'Hace mucho tiempo me dijiste que me querias mostrar tu granja de slime rancher ahahahahah y quiero verla!!! En general siento que me gustaria mucho jugar contigo. Me la paso muy bien contigo y amo lo cliche que puedo ser mostrandote como jugar solo para poder tocarte las manos je. Podemos jugar toda la noche :3 lo que a ti te guste hermosa, en todo te puedo ganar ahahahah. Ademas!!! Tenemos que jugar clue ahahhahaah soy un fastidio con eso pero lo amo. Me gusta mucho pasar el tiempo contigo bonita.',
     images: ['Assets/kirby-navideño.png']
   },
   {
-    title: 'Cena Romántica',
+    title: 'Cena de pancito chef',
     text: 'Soy demasiado cliche ahahahah eso ya se sabe. Y me gustan las cosas sencillas? Como hacerte una cena romantica y tener una linda cita navideña contigo. Yo te puedo cocinar lo que tu quieras amor. Pasta, sushi, burritos, hamburguesa smash en termino 3/4 como te gusta, lo que tu desees hermosa. Y como soy muy romantica aja tu te imaginas ahahah velas porque me gusta mucho como te ves con luz calida, flores para ti :3, comida especial para cebo y pita ahahaha todo linda.Y claramente sexo romantico ;)',
     images: ['Assets/pinguino-romantico.png']
   }
@@ -294,19 +294,19 @@ if (responseForm) {
       if (res.ok) {
         responseForm.reset();
         if (successMessage) {
-          successMessage.textContent = '¡Gracias! Tu respuesta ha sido enviada.';
+          successMessage.textContent = 'Muy bien bonita, gracias por tu respuesta';
           successMessage.classList.remove('hidden');
         }
       } else {
         const data = await res.json().catch(() => ({}));
         if (successMessage) {
-          successMessage.textContent = data.error || 'Error al enviar. Intenta de nuevo.';
+          successMessage.textContent = data.error || 'Aaaaa me voy a matar no funciono y se callo :( pero sigueee';
           successMessage.classList.remove('hidden');
         }
       }
     } catch (err) {
       if (successMessage) {
-        successMessage.textContent = 'Error de red. Revisa tu conexión.';
+        successMessage.textContent = 'Aaaaa me voy a matar no funciono y se callo :( pero sigueee';
         successMessage.classList.remove('hidden');
       }
     } finally {
@@ -487,7 +487,7 @@ function handleChoice(choiceIndex, buttonEl){
       setTimeout(()=> buttonEl.classList.remove('wrong'), 520);
     }
     if (feedback) {
-      feedback.textContent = 'Incorrecto — sigue al siguiente y vuelve a intentar al final.';
+      feedback.textContent = 'Ai mal pipipi vuelve a intentar';
     }
     // advance after short delay
     setTimeout(()=>{
