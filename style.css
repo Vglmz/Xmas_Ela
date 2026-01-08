@@ -598,3 +598,71 @@ input, textarea, select, button, .btn-choice, .submit-btn {
   display: none;
 }
 
+/* Responsive: tablet -> phone adjustments */
+@media screen and (max-width: 900px) {
+  .content { width: calc(100% - 48px); padding: 28px; min-height: 520px; }
+  .content h1 { font-size: 1.9rem; }
+  .content p { max-width: 100%; font-size: 1rem; }
+
+  .content-images { flex-direction: row; gap: 12px; }
+  .content-images .main-cebo { width: 260px; }
+  .content-images .side-cebo { width: 200px; }
+
+  .gallery-section h2 { font-size: 1.35rem; max-width: 640px; }
+  .carousel { gap: 20px; }
+  .nav-btn img { width: 54px; height: 54px; }
+  .media-slot { width: 280px; height: 320px; }
+  .main-image { width: 100%; max-width: 100%; }
+  .text-box { width: 88%; }
+
+  .mockup-gif { width: 360px; }
+  .image-button { width: 420px; }
+
+  .modal { padding: 40px; max-width: 95%; }
+  .modal-slides { width: 100%; }
+  .slide-row { gap: 14px; }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  body { font-size: 14px; }
+  .content { width: calc(100% - 28px); padding: 18px; min-height: auto; }
+  .content h1 { font-size: 1.35rem; }
+  .content p { font-size: 0.98rem; }
+
+  .center { display: none; } /* hide big centered headline on small screens */
+
+  /* stack intro images vertically */
+  .content-images { flex-direction: column; gap: 10px; }
+  .content-images .main-cebo, .content-images .side-cebo { width: 84%; }
+
+  /* carousel & media */
+  .carousel { flex-direction: column; gap: 12px; }
+  .nav-btn { position: static; }
+  .nav-btn img { width: 44px; height: 44px; }
+  .media-slot { width: 92%; height: auto; padding: 0; }
+  .main-image { width: 100%; height: auto; }
+  .text-box { width: 94%; padding: 12px; }
+
+  .gallery-section h2 { font-size: 1.05rem; margin-bottom: 18px; }
+
+  /* quiz / modal adjustments */
+  .modal { padding: 22px; border-radius: 12px; max-width: 96%; }
+  .modal-slideshow { flex-direction: column; gap: 8px; }
+  .slide-row { flex-direction: column; align-items: center; }
+  .slide .slide-text { width: 100%; text-align: center; }
+  .slide .slide-images { width: 100%; }
+  .slide .slide-images img { width: 100%; }
+
+  .quiz-slider .quiz-slide-display { width: 100%; max-width: 100%; }
+
+  .mockup-gif { width: 84%; }
+  .image-button { width: 94%; }
+
+  .response-section { width: 96%; }
+
+  .unlocked-item { width: 46%; }
+
+  /* smaller nav arrows for quiz slides */
+  #quizPrevSlide, #quizNextSlide { width: 40px; height: 40px; font-size: 28px; }
+}
